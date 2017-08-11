@@ -1,0 +1,201 @@
+.v2-edit-popup-modal-background {
+  background: #000;
+  /*display: none;*/
+  overflow: hidden;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+  position: fixed;
+  width: 100%;
+  z-index: 9998;
+  background-color: white;
+  opacity: 0.9;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.v2-edit-popup-modal-container {
+  color: white;
+  /*display: none;*/
+  left: 0;
+  /*margin: 20px auto;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  /*border: 3px solid #E47325;*/
+  /*background-color: white;*/
+  text-shadow: none;
+  overflow: scroll;
+  height: 100%;
+}
+
+.v2-edit-popup-modal-top-picture-gallery {
+  height: 140px;
+  width: 1075px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-back {
+  height: 110px;
+  width: 60px;
+  margin: 13px 10px;
+  float: left;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-next {
+  height: 110px;
+  width: 60px;
+  margin: 13px 10px;
+  float: left;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-pictures-container {
+  width: 912px;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-item {
+  height: 110px;
+  width: 110px;
+  overflow: hidden;
+  background-color: #F0F0F0;
+  margin: 13px 10px;
+  float: left;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-item.active {
+  background-color: #FF0350;
+  border-radius: 10px;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-item-image {
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-back-arrow {
+  margin-left: 40px;
+  margin-top: 50px;
+  position: relative;
+  background: #FF0350;
+  border: 6px solid #F0F0F0;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-back-arrow:after, .v2-edit-popup-modal-top-picture-gallery-go-back-arrow:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-back-arrow:after {
+  border-color: rgba(255, 3, 80, 0);
+  border-right-color: #FF0350;
+  border-width: 30px;
+  margin-top: -30px;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-back-arrow:before {
+  border-color: rgba(240, 240, 240, 0);
+  border-right-color: #F0F0F0;
+  border-width: 36px;
+  margin-top: -36px;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-next-arrow {
+  margin-right: 40px;
+  margin-top: 50px;
+  position: relative;
+  background: #FF0350;
+  border: 6px solid #F0F0F0;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-next-arrow:after, .v2-edit-popup-modal-top-picture-gallery-go-next-arrow:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-next-arrow:after {
+  border-color: rgba(255, 3, 80, 0);
+  border-left-color: #FF0350;
+  border-width: 30px;
+  margin-top: -30px;
+}
+
+.v2-edit-popup-modal-top-picture-gallery-go-next-arrow:before {
+  border-color: rgba(240, 240, 240, 0);
+  border-left-color: #F0F0F0;
+  border-width: 36px;
+  margin-top: -36px;
+}
+
+.v2-edit-popup-modal-container-header-text {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #404146;
+  font-weight: bold;
+  font-family: "PFAgoraSansPro","Open Sans",sans-serif;
+}
+
+.v2-image-editor-container {
+  width: 880px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+}
+
+.v2-image-editor-text-blocks {
+  width: 300px;
+  float: left;
+  padding-top: 2px;
+}
+
+.v2-image-editor-text-blocks-image {
+  width: 300px;
+}
+
+.v2-image-editor-cropping-zone {
+  width: 520px;
+  height: 520px;
+  float: left;
+  margin-left: 15px;
+}
+
+.v2-image-editor-actions {
+  overflow: hidden;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.v2-image-editor-rotate-control {
+  float: left;
+  width: 20px;
+  height: 510px;
+}
+
+.v2-image-editor-rotate-control-image {
+  margin-left: 5px;
+  margin-top: 60px;
+}

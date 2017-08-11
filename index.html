@@ -1,0 +1,1858 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cube Album - Кабинет</title>
+
+    <link rel="stylesheet" media="all" href="./css/application.css" />
+    <link rel="stylesheet" media="all" href="./css/croppie.css" />
+    <link rel="stylesheet" media="all" href="./css/custom.css" />
+    <link rel="stylesheet" media="all" href="./css/fabric.css" />
+    <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic-ext,latin" />
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="Jq+6tlIFHvkIAkGBOcr1PY9828xNlzIMZEJqrbFyY5MWEATywcBtWoQnttZwy93o8gS7kWEQ7MxKCPN2uo8PZA==" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="noindex, nofollow" name="robots" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body class="inline-fix">
+    <div class="page-wrapper">
+      <div class="navbar navbar-default navbar-static-top white-bg b-header clearfix">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+          <img class="b-header-logo" alt="" src="./images/logo.png" /></a>
+
+          <div class="topbar">
+            <ul class="b-header-content__actions">
+              <li class="b-header-content__action">
+                <img class="b-header-content__action-icon" alt="" src="./images/user-auth-icon.png" />
+              </li>
+
+              <li class="b-header-content__action user-menu">
+                <div class="dropdown user-menu">
+                  <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="userMenu" type="button">
+                    Дамир Сафин<span class="caret"></span>
+                  </button>
+
+                  <ul aria-labelledby="userMenu" class="dropdown-menu">
+                    <li><a rel="nofollow" href="/profile">Настройки</a></li>
+                    <li><a rel="nofollow" data-method="delete" href="/users/sign_out">Выход</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="b-header-content__action cursor-pointer">
+                <a class="js-create_new_cube" rel="nofollow" href="#">Создать альбом</a>
+              </li>
+
+              <li class="b-header-content__action">
+                <span>|</span>
+              </li>
+
+              <li class="b-header-content__action cursor-pointer">
+                <a rel="nofollow" href="/orders">Мои заказы</a>
+              </li>
+
+              <li class="b-header-content__action">
+                <span>|</span>
+              </li>
+
+              <li class="b-header-content__action cursor-pointer">
+                <a rel="nofollow" href="/cubes">Мои Альбомы</a>
+              </li>
+
+              <li class="b-header-content__action">
+                <img class="b-header-content__action-icon" alt="" src="./images/user-call-icon.png" />
+                <span class="uppercase m-l-sm">8 (800) 345 03 94</span>
+              </li>
+            </ul>
+          </div>
+
+          <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <nav class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right b-header-content-menu">
+              <li class="b-header-content__menu-list-item">
+                <a class="uppercase b-header-content-menu__menu-item-text cursor-pointer" href="/faq_contents">FAQ</a>
+              </li>
+
+              <li class="b-header-content__menu-list-item hidden-xs hidden-sm separator">
+                <a><span>|</span></a>
+              </li>
+
+              <li class="b-header-content__menu-list-item">
+                <a class="uppercase b-header-content-menu__menu-item-text cursor-pointer" href="/portfolio">Портфолио</a>
+              </li>
+
+              <li class="b-header-content__menu-list-item hidden-xs hidden-sm separator">
+                <a><span>|</span></a>
+              </li>
+
+              <li class="b-header-content__menu-list-item">
+                <a href="https://cubealbum.ru/feedbacks">
+                  <span class="uppercase b-header-content-menu__menu-item-text cursor-pointer">Отзывы</span>
+                </a>
+              </li>
+
+              <li class="b-header-content__menu-list-item hidden-xs hidden-sm separator">
+                <a><span>|</span></a>
+              </li>
+
+              <li class="b-header-content__menu-list-item">
+                <a href="https://cubealbum.ru/contacts/new">
+                  <span class="uppercase b-header-content-menu__menu-item-text cursor-pointer">Контакты</span>
+                </a>
+              </li>
+
+              <li class="b-header-content__menu-list-item hidden-xs hidden-sm separator">
+                <a><span>|</span></a>
+              </li>
+
+              <li class="b-header-content__menu-list-item">
+                <a href="https://cubealbum.ru/partners/new">
+                  <span class="uppercase b-header-content-menu__menu-item-text cursor-pointer">Партнерам</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="wrapper">
+          <div class="container">
+            <div class="b-progress-bar" id="navigation">
+              <div class="b-progress-bar__step-container insta">
+                <a data-container="instagram_images_work_area" class="js-cube_breadcrumbs" href="#">
+                  <div class="b-progress-bar__step insta active">
+                    <i class="fa fa-camera"></i>
+                  </div>
+                  <p class="b-progress-bar__step-text">
+                    Загрузка фото из Instagram
+                  </p>
+                </a>
+              </div>
+
+              <div class="b-progress-bar__step-container device">
+                <a data-container="devise_images_work_area" class="js-cube_breadcrumbs" href="#">
+                  <div class="b-progress-bar__step device active">
+                    <i class="fa fa-mobile"></i>
+                  </div>
+                  <p class="b-progress-bar__step-text">
+                    Загрузка фото с устройства
+                  </p>
+                </a>
+              </div>
+
+              <div class="b-progress-bar__step-container edit">
+                <a data-container="saved_images_work_area" class="js-cube_breadcrumbs" href="#">
+                  <div class="b-progress-bar__step edit ">
+                    <i class="fa fa-pencil-square"></i>
+                  </div>
+                  <p class="b-progress-bar__step-text">
+                    Редактирование фото
+                  </p>
+                </a>
+              </div>
+
+              <div class="b-progress-bar__step-container cover">
+                <a data-container="cover_settings_work_area" class="js-select_cover " href="#">
+                  <div class="b-progress-bar__step cover">
+                    <i class="fa fa-picture-o"></i>
+                  </div>
+                  <p class="b-progress-bar__step-text">
+                    Выбор обложки
+                  </p>
+                </a>
+              </div>
+
+              <div class="b-progress-bar__step-container checkout">
+                <a class="js-create_order_in_edit_cube js-cover-undefined " href="#">
+                  <div class="b-progress-bar__step checkout disabled">
+                    <i class="fa fa-shopping-cart"></i>
+                  </div>
+                  <p class="b-progress-bar__step-text">
+                    Оформление заказа
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="b-separator hidden-xs hidden-sm"></div>
+
+          <div class="container b-photos" id="work_areas">
+            <div class="hidden" id="instagram_images_work_area">
+              <div class="m-b-sm clearfix fixedsticky" style="top: 0px; z-index: 100;">
+                <div class="row white-bg">
+                  <div class="col-xs-12 col-sm-5 col-md-5 col-lg-6 m-t-sm">
+                    <p class="size-default">
+                      Вы можете загрузить фотографии из любых публичных аккаунтов, вашего аккаунта или аккаунта ваших друзей. Если вы хотите загрузить фото с вашего устройства, вы можете пропустить этот шаг.
+                    </p>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-7 col-md-7 col-lg-6 m-t-sm">
+                    <a class="btn btn-success pull-right js-transition_to_next_block" href="#">Все готово, дальше</a>
+                    <a class="btn btn-default pull-right disabled js-sync_params" href="#">Синхронизировать изменения</a>
+                  </div>
+                </div>
+
+                <div class="well well-lg seach_by_instagram_form_block">
+                  <div class="b-photos__photos m-b-sm loading hidden" id="search_form_loaded_block">
+                    <div class="b-photos__spinner search_form_loaded_spinner hidden">
+                      <i class="fa fa-cog fa-spin fa-2x"></i>
+                      <span>Инициализация формы поиска</span>
+                    </div>
+                  </div>
+
+                  <form class="simple_form seach_by_instagram_form" id="seach_by_instagram_form" novalidate="novalidate" action="/instagram_images/search" accept-charset="UTF-8" data-remote="true" method="get">
+                    <input name="utf8" type="hidden" value="✓">
+
+                    <div class="input hidden search_search_type">
+                      <input value="my_account" class="hidden" type="hidden" name="search[search_type]" id="search_search_type">
+                    </div>
+
+                    <input type="hidden" name="infinite_scroll_is_permitted" id="infinite_scroll_is_permitted" value="no">
+
+                    <div class="row">
+                      <div class="pull-left" id="account_toogle_buttons">
+                        <a class="btn m-r-xs filter-button pull-left btn-primary" id="my_account" href="#">Выгрузить фото со своего аккаунта</a>
+                        <a class="btn btn-default on-grey pull-left" id="other_account" href="#">Выгрузить фото с чужого аккаунта</a>
+                      </div>
+
+                      <div class="col-sm-3" id="autocomplete_input">
+                        <input class="string required form-control js-account-name-input pull-left b-photos__account-input hidden ui-autocomplete-input" label="false" maxlength="30" placeholder="friend_nickname" type="text" name="search[instagram_nickname]" id="search_instagram_nickname" aria-required="true" autocomplete="off">
+
+                        <div id="autocomplete_wrap_div"></div>
+                      </div>
+
+                      <div class="search_input_spinner col-sm-1">
+                        <i class="fa fa-spinner fa-pulse fa-2x hidden" id="load_spinner"></i>
+                      </div>
+
+                      <div class="col-sm-2 pull-right" id="api_download_button">
+                        <a class="btn btn-success pull-right js-load_button_instagram" href="javascript:;">Загрузить</a>
+                      </div>
+                    </div>
+
+                    <div class="row" id="api_filters_row">
+                      <div class="col-xs-12 col-sm-2 border-right b-photos__column">
+                        <div class="b-photos__input-container vamiddle">
+                          <div class="radio">
+                            <input type="radio" name="search[search_mode]" id="search_search_mode_all" value="all" checked="checked">
+                            <label class="b-photos__label" for="search_search_mode_all">Все фотографии</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-4 border-right b-photos__column">
+                        <div class="b-photos__input-container">
+                          <div class="radio">
+                            <input type="radio" name="search[search_mode]" id="search_search_mode_last" value="last">
+                            <label class="b-photos__label" for="search_search_mode_last">Последние</label>
+                          </div>
+
+                          <input class="string required form-control b-photos__input b-photos__amount" placeholder="40" type="text" name="search[last_photos_count]" id="search_last_photos_count" aria-required="true">
+                          <span class="b-photos__label">фотографий</span>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 b-photos__column">
+                        <div class="b-photos__input-container">
+                          <div class="radio">
+                            <input type="radio" name="search[search_mode]" id="search_search_mode_date" value="date"><label class="b-photos__label" for="search_search_mode_date">По дате с</label>
+                          </div>
+
+                          <input type="text" name="search[start_date]" id="from" class="form-control b-photos__date b-photos__input" placeholder="6/10/2010">
+                          <span class="b-photos__label">по</span>
+                          <input type="text" name="search[end_date]" id="to" class="form-control b-photos__date b-photos__input" placeholder="04/05/2017">
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-3 b-photos__column hidden" id="last_photos_input_error"></div>
+                    </div>
+                  </form>
+
+                  <div class="hidden_fields_for_switch_logic hidden">
+                    <input type="hidden" name="current_search_type" id="current_search_type" value="my_account">
+                    <input type="hidden" name="current_search_mode" id="current_search_mode" value="all">
+                  </div>
+
+                  <div class="row" id="api_filters_counter_row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="col-xs-12 col-sm-4">
+                        <div class="select_or_unselect_inform_block_wrap">
+                          <div class="b-photos__text main-text js-selected-images-counter">
+                            У вас пока не выбрано не одной фотографии.
+                          </div>
+
+                          <div class="b-photos__text main-text js-remaining-selected-images-limit">
+                            Осталось не более 200 фотографий.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-8 select_or_unselect_actions">
+                        <a class="btn btn-default on-grey m-l-sm pull-right js-unselect_all_images disabled" href="#">
+                          Снять выделение
+                        </a>
+
+                        <a class="btn btn-default on-grey m-l-sm pull-right js-select_all_images disabled" href="#">Выбрать все</a>
+
+                        <a class="btn btn-default js-clean-api-or-devise-images on-grey m-l-sm pull-right" href="#">Очистить область фотографий</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12 m-b-sm">
+                  <div class="b-photos__photos m-b-sm loading">
+                    <div class="b-photos__photos" id="api_images_list"></div>
+                    <div class="b-photos__spinner api_images_loaded_spinner js-instagram-pagination-block hidden">
+                      <div class="js-loading-spinner">
+                        <i class="fa fa-spinner fa-pulse fa-2x"></i>
+                        <span>Фотографии загружаются</span>
+                      </div>
+
+                      <span class="pagination_end_message">К сожалению, по данному фильтру фотографий больше не осталось</span>
+                      <span class="limit_images_message">Вы загрузили максимальное возможное количество фотографий в 500 штук!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden" id="devise_images_work_area">
+              <div class="m-b-sm clearfix fixedsticky" style="top: 0px; z-index: 100;">
+                <div class="well well-lg devise_actions_block">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                      <div class="select_or_unselect_inform_block_wrap">
+                        <div class="b-photos__text main-text js-selected-images-counter">
+                          У вас пока не выбрано не одной фотографии.
+                        </div>
+
+                        <div class="b-photos__text main-text js-remaining-selected-images-limit">
+                          Осталось не более 200 фотографий.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8 select_or_unselect_actions">
+                      <a class="btn btn-default on-grey m-l-sm pull-right js-unselect_all_images disabled" href="#">
+                        Снять выделение
+                      </a>
+
+                      <a class="btn btn-default on-grey m-l-sm pull-right js-select_all_images disabled" href="#">Выбрать все</a>
+                      <a class="btn btn-default js-clean-api-or-devise-images on-grey m-l-sm pull-right" href="#">Очистить область фотографий</a>
+                    </div>
+                  </div>
+
+                  <div class="row" id="device_upload_form_block">
+                    <div class="col-xs-12 col-sm-4">
+                      <p class="main-text">
+                        Здесь вы можете загрузить фотографии с устройства
+                      </p>
+
+                      <label class="btn btn-primary btn-file" id="fileupload">
+                        Загрузить с устройства<input type="file" name="devise_images[file]" id="devise_images_file" accept="images/*" multiple="multiple" style="display: none;">
+                      </label>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8">
+                      <div class="progress">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar progress-bar-warning progress-bar-striped" id="progress-bar" role="progressbar" style="width: 0%"></div>
+                      </div>
+                    </div>
+
+                    <div class="row pull-right" id="device_buttons_block">
+                      <div class="col-md-3 pull-right" id="all_good_wrapper">
+                        <a class="btn btn-success pull-right js-transition_to_next_block" href="#">Все готово, дальше</a>
+                      </div>
+
+                      <div class="col-md-4 pull-right" id="popover_and_button_wrapper">
+                        <a class="btn btn-default pull-right disabled js-sync_params" href="#">Синхронизировать изменения</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12 m-b-sm">
+                  <div class="b-photos__photos" id="devise_images_list"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="saved_images_work_area">
+              <div class="m-b-sm clearfix fixedsticky" style="top: 0px; z-index: 100;">
+                <div class="well well-lg row controls_or_counters">
+                  <div class="col-xs-12">
+                    <div class="col-xs-12 col-sm-5" id="spreads_images_counter">
+                      <div class="b-photos__text main-text js-current_spreads_images_count has-error">Текущее количество фотографий: 60</div>
+
+                      <div class="b-photos__text main-text">
+                        Допустимое количество фотографий: 48, 96, 144, 200
+                      </div>
+                    </div>
+
+                    <div class="b-edit__buttons pull-right js-saved-images-area-controls">
+                      <a class="btn btn-default js-vertical_spreads" href="#">
+                        <i class="fa fa-arrows-v"></i>
+                      </a>
+
+                      <a class="btn btn-default m-l-xs js-horizontal_spreads active" href="#">
+                        <i class="fa fa-arrows-h"></i>
+                      </a>
+
+                      <a class="btn btn-default active m-l-xs js-reverse_spreads-up" href="#">
+                        <i class="fa fa-long-arrow-up"></i>
+                      </a>
+
+                      <a class="btn btn-default m-l-xs mr-md js-reverse_spreads-down" href="#">
+                        <i class="fa fa-long-arrow-down"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="add_phpto_button_block pull-left">
+                    <a class="btn btn-primary m-r-xs js-add-photo-button" href="#">Добавить фото</a>
+                  </div>
+
+                  <div class="saved_images_buttons_block pull-right mr-md">
+                    <a class="btn btn-success pull-right js-go_next_saved_images" href="#">Все готово, дальше</a>
+
+                    <div class="col-md-4 pull-right" id="popover_and_button_wrapper">
+                      <a class="btn btn-default pull-right js-sync_params" href="#">Синхронизировать изменения</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row b-edit__main saved-images-area js-saved-images-area-loading-container horizontal">
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="js-spread-drag-and-drop-container pull-left ui-droppable">
+                  <div class="b-edit-block js-spread-drag-and-drop-item ui-draggable" data-element-id="spread_item_1">
+                    <div class="cube_spread_item-images-area">
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_1">
+                          <img alt="" class="b-edit-block__image" src="./images/1.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="js-drag-and-drop-element-container ui-droppable">
+                        <div class="b-edit-block__photo js-drag-and-drop-element-item ui-draggable" data-element-id="item_2">
+                          <img alt="" class="b-edit-block__image" src="./images/2.jpg">
+
+                          <div class="b-photo-spinner">
+                            <i class="fa fa-spinner fa-pulse b-photo-spinner__spinner" id="image_load_spinner"></i>
+                          </div>
+
+                          <div class="b-edit-block__overlay-actions">
+                            <a class="b-edit-block__action top-left js-spread-item-corner ui-draggable-handle">
+                              <i class="fa fa-arrows"></i>
+                            </a>
+
+                            <a class="b-edit-block__action top-right js-spread-item-delete">
+                              <i class="fa fa-trash"></i>
+                            </a>
+
+                            <a class="b-edit-block__action center js-spread-image-zoom">
+                              <i class="fa fa-search"></i>
+                            </a>
+                          </div>
+
+                          <div class="spread-image-type-icon mobile_view">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-edit-block__sidebar">
+                      <a class="b-edit-block__action js-spread-corner ui-draggable-handle">
+                        <i class="fa fa-arrows"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-edit">
+                        <i class="fa fa-wrench"></i>
+                      </a>
+
+                      <a class="b-edit-block__action js-spread-delete">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row b-edit__main spreads_loaded_block b-photos__photos m-b-sm loading hidden">
+                <div class="b-photos__spinner spreads_loaded_spinner">
+                  <i class="fa fa-spinner fa-pulse fa-2x" id="load_spinner"></i>
+                  <span>Подгрузка данных</span>
+                </div>
+              </div>
+
+              <div class="b-progress-pie">
+                <div class="hidden">
+                  <input class="js-progress-bar-input" type="text">&gt;
+                </div>
+
+                <div class="saved_images_progress_bar">
+                  <div class="progress-pie-chart">
+                    <div class="ppc-progress">
+                      <div class="ppc-progress-fill" style="transform: rotate(0deg);"></div>
+                    </div>
+
+                    <div class="ppc-percents">
+                      <div class="pcc-percents-wrapper">
+                        <span>0%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+
+          <div class="b-progress-pie hidden" id="concealing_veil">
+            <div class="hidden">
+              <input class="js-concealing-veil" type="text" value="0">
+            </div>
+
+            <div class="saved_images_progress_bar">
+              <div class="progress-pie-chart">
+                <div class="ppc-progress">
+                  <div class="ppc-progress-fill" style="transform: rotate(0deg);"></div>
+                </div>
+
+                <div class="ppc-percents">
+                  <div class="pcc-percents-wrapper">
+                    <div class="b-photos__spinner">
+                      <p id="load_data">
+                        Подгрузка данных
+                      </p>
+                      <i class="fa fa-spinner fa-pulse fa-2x" id="load_spinner"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar navbar-default navbar-static-bottom grey-bg b-footer">
+      <div class="b-footer__content">
+        <p class="b-footer__text">
+          ООО "CUBEALBUM" 2015
+          <br />
+          г. Казань, ул. Космонавтов, 34. Тел. 8 (800) 234 62 35
+        </p>
+
+        <a class="b-footer__link privacy_policy_link" href="https://cubealbum.ru/pages/polzovatelskoe-soglashenie">
+          Пользовательское соглашение
+        </a>
+
+        <a class="b-footer__link" href="https://cubealbum.ru/pages/politika-konfidentsialnosti">
+          Политика конфиденциальности
+        </a>
+      </div>
+    </div>
+
+    <!-- Этот блок и есть окошко редактирования -->
+
+    <div class="v2-edit-popup-modal-background"></div>
+
+    <div class="v2-edit-popup-modal-container">
+      <h1 class="v2-edit-popup-modal-container-header-text">
+        ШАГ 3: Редактирование фото
+      </h1>
+
+      <div class="v2-edit-popup-modal-top-picture-gallery">
+        <div class="v2-edit-popup-modal-top-picture-gallery-go-back">
+          <div class="v2-edit-popup-modal-top-picture-gallery-go-back-arrow"></div>
+        </div>
+
+        <div class="v2-edit-popup-modal-top-picture-gallery-pictures-container">
+          <div class="thumbnail v2-edit-popup-modal-top-picture-gallery-item">
+            <img src="./images/samples/1.jpg" class="v2-edit-popup-modal-top-picture-gallery-item-image">
+          </div>
+          <div class="thumbnail v2-edit-popup-modal-top-picture-gallery-item">
+            <img src="./images/samples/2.jpg" class="v2-edit-popup-modal-top-picture-gallery-item-image">
+          </div>
+          <div class="thumbnail v2-edit-popup-modal-top-picture-gallery-item">
+            <img src="./images/samples/3.jpg" class="v2-edit-popup-modal-top-picture-gallery-item-image">
+          </div>
+          <div class="thumbnail v2-edit-popup-modal-top-picture-gallery-item">
+            <img src="./images/samples/4.jpg" class="v2-edit-popup-modal-top-picture-gallery-item-image">
+          </div>
+          <div class="thumbnail v2-edit-popup-modal-top-picture-gallery-item">
+            <img src="./images/samples/5.jpg" class="v2-edit-popup-modal-top-picture-gallery-item-image">
+          </div>
+          <div class="thumbnail v2-edit-popup-modal-top-picture-gallery-item active">
+            <img src="./images/samples/6.jpg" class="v2-edit-popup-modal-top-picture-gallery-item-image">
+          </div>
+          <div class="thumbnail v2-edit-popup-modal-top-picture-gallery-item">
+            <img src="./images/samples/7.jpg" class="v2-edit-popup-modal-top-picture-gallery-item-image">
+          </div>
+        </div>
+
+        <div class="v2-edit-popup-modal-top-picture-gallery-go-next">
+          <div class="v2-edit-popup-modal-top-picture-gallery-go-next-arrow"></div>
+        </div>
+      </div>
+
+      <div class="v2-image-editor-container">
+        <div class="v2-image-editor-text-blocks">
+          <div class="maker-module__wrap">
+            <div class="maker-module" data-text="0">
+              <div class="maker-module__header">
+                <span class="maker-module__close-toggle"></span>
+                <button type="button" class="maker-module__remove">x</button>
+                <div class="maker-module__header-title">Text</div>
+              </div>
+              <div class="maker-module__body">
+                <div class="maker-module__row">
+                  <textarea class="text-input" id="textText1" rows="3" maxlength="50">Example</textarea>
+                </div>
+                <div class="maker-module__row">
+                  <label for="text-style">Style</label>
+                  <select name="text-style" id="text-style" class="maker-module__select text-style">
+                    <option value="Arial">Arial</option>
+                    <option value="PFAgoraSansPro">Agora Sans Pro</option>
+                    <option value="Helvetica Neue">Helvetica Neue</option>
+                  </select>
+                </div>
+                <div class="maker-module__row">
+                  <label for="text-color">Color</label>
+                  <input type="color" name="text-color" id="text-color" class="text-color" value="#ffffff">
+                </div>
+                <div class="maker-module__row">
+                  <label for="text-size">Size</label>
+                  <select name="text-size" id="text-size" class="maker-module__select text-size">
+                    <option value="auto">auto</option>
+                    <option value="70">70</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="maker-module__footer">
+            <div class="btn-maker">
+              <button class="js-more-btn">+ More text</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="v2-image-editor-cropping-zone">
+          <div class="canvas-wrap">
+            <div>
+              <canvas id="fabric" width="520" height="520"></canvas>
+            </div>
+            <div class="scale-wrap">
+              <div id="slider-scale" style="width:390px; height:3px;"></div>
+            </div>
+            <div class="rotate-wrap">
+              <div id="slider-rotate" style="height:390px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="v2-image-editor-actions">
+        <a href="#" class="btn btn-default m-r-xs">Назад</a>
+        <a href="#" class="btn btn-primary m-r-xs">Мне нравиться! Идем дальше!</a>
+      </div>
+    </div>
+
+    <a class="cd-top" href="#0"></a>
+
+    <script src="./javascripts/application.js"></script>
+
+    <script src="./javascripts/fabric.min.js"></script>
+    <script src="./javascripts/main.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        // Disabled scrolling of background content
+        $("body").css("overflow", "hidden")
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+.canvas-wrap {
+    position: relative;
+    z-index: 1;
+}
+#slider-scale {
+    margin: 20px auto;
+}
+
+.rotate-wrap {
+    position: absolute;
+    z-index: 10;
+    top: 70px;
+    right: -20px;
+}
+
+/*
+//  maker module
+*/
+
+.maker-module {
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.maker-module__header {
+    position: relative;
+    z-index: 1;
+    padding: 10px 15px 10px 35px;
+    background-color: #1e2d31;
+    color: #fff;
+    cursor: pointer;
+}
+
+.maker-module__remove {
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    right: 10px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.maker-module__remove:hover {
+    color: red;
+}
+
+.maker-module__close-toggle {
+    position: absolute;
+    z-index: 1;
+    top: 18px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.maker-module__header.closed .maker-module__close-toggle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #fff transparent transparent transparent;
+}
+
+.maker-module__body {
+    padding: 15px;
+    background-color: #ccc;
+    color: #000;
+}
+.maker-module .text-input {
+    width: 100%;
+}
+
+.maker-module__row {
+    margin-bottom: 15px;
+}
+
+.maker-module__row label {
+    width: 50px;
+}
+
+.maker-module__select {
+    width: 155px;
+    height: 25px;
+    line-height: 25px;
+}
+.maker-module__footer {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.maker-module__footer .btn-maker {
+    background-color: #1e2d31;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.maker-module__footer button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+/*
+//slider ui
+*/
+.ui-slider-vertical {
+    width: 3px;
+    background: rgb(86, 84, 84);
+}
+.ui-slider-horizontal {
+    background: rgb(86, 84, 84);
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -8px;
+}
+.ui-slider-vertical .ui-slider-range-min {
+    background: rgb(86, 84, 84);
+}
+.ui-slider-horizontal .ui-slider-range-min {
+    background: rgb(86, 84, 84);
+}
+.ui-slider .ui-slider-handle {
+    left: -8px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(196, 196, 196);
+    border-radius: 18px;
+    cursor: pointer;
+    outline: none;
+}
